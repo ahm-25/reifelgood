@@ -49,12 +49,12 @@ const toggleMobileMenu = () => {
 // Exact links matching Reif El-Good navigation & sections
 const exactNavLinks = [
   { label: 'الرئيسية', href: '#hero' },
-  { label: 'من نحن', href: '#features' },
-  { label: 'المطابخ', href: '#demo' },
-  { label: 'خدماتنا', href: '#metrics' },
-  { label: 'أعمالنا', href: '#pricing' },
+  { label: 'من نحن', href: '#about' },
+  { label: 'المطابخ', href: '#kitchens' },
+  { label: 'خدماتنا', href: '#services' },
+  { label: 'أعمالنا', href: '#works' },
   { label: 'الأسئلة الشائعة', href: '#faq' },
-  { label: 'تواصل معنا', href: '#cta' }
+  { label: 'تواصل معنا', href: '#contact' }
 ]
 </script>
 

@@ -66,7 +66,7 @@ import { ref } from 'vue'
               </a>
             </li>
             <li>
-              <a href="#portfolio" class="hover:text-[#e3b75e] transition-colors inline-block hover:translate-x-[-4px] duration-200">
+              <a href="#works" class="hover:text-[#e3b75e] transition-colors inline-block hover:translate-x-[-4px] duration-200">
                 معرض أعمالنا
               </a>
             </li>
