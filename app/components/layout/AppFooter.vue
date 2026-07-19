@@ -1,41 +1,108 @@
 <script setup lang="ts">
-import { navLinks } from '~/data/landingData'
+import { ref } from 'vue'
 </script>
 
 <template>
-  <footer class="border-t border-[#c8932b]/20 bg-[#2b1810] text-sm text-[#ecd9bd] relative z-10 py-16 px-6 md:px-12 font-sans">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
-      <!-- Right: Brand & Copyright -->
-      <div class="flex flex-col items-center md:items-start gap-3 text-right">
-        <NuxtLink to="/" class="flex items-center gap-2.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c8932b] rounded-lg">
-          <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-[#c8932b] to-[#e3b75e] p-[1.5px] flex items-center justify-center">
-            <span class="text-[#2b1810] font-black text-sm font-display">أ</span>
+  <footer class="bg-[#1c0f08] text-[#ecd9bd]/70 pt-16 sm:pt-20 border-t border-[#ecd9bd]/10 font-sans relative z-10" dir="rtl">
+    
+    <div class="max-w-6xl mx-auto px-6 lg:px-12">
+      
+      <!-- 4-Column Grid exactly matching .foot-grid (1.4fr 1fr 1fr 1.2fr) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-14 border-b border-[#ecd9bd]/10">
+        
+        <!-- Col 1: Logo & About (1.4fr) -->
+        <div class="lg:col-span-1">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-13 h-13 rounded-full border-2 border-[#c8932b] overflow-hidden shrink-0 bg-[#2b1810] flex items-center justify-center">
+              <span class="font-display font-bold text-xl text-[#e3b75e]">ج</span>
+            </div>
+            <strong class="font-display text-xl sm:text-2xl text-[#f4e8d8] font-bold">
+              مطابخ جوري
+            </strong>
           </div>
-          <span class="text-xl font-bold tracking-tight text-white font-display">أثير</span>
-        </NuxtLink>
-        <p class="text-xs text-[#c08a52] text-center md:text-right leading-relaxed">
-          &copy; {{ new Date().getFullYear() }} شركة أنظمة أثير المحدودة. جميع الحقوق محفوظة. <br />
-          صُمم ببراعة ودقة هندسية فائقة مع حوسبة WebAssembly الطرفية.
-        </p>
+          <p class="text-sm text-[#ecd9bd]/70 leading-relaxed">
+            شركة متخصصة في تصميم وتنفيذ وتركيب جميع أنواع المطابخ والخزائن والمجالس والستائر بخبرة طويلة وجودة عالية وضمان حقيقي.
+          </p>
+        </div>
+
+        <!-- Col 2: Our Services (1fr) -->
+        <div>
+          <h4 class="font-bold text-base sm:text-[1.05rem] text-[#f4e8d8] mb-5">
+            خدماتنا
+          </h4>
+          <ul class="space-y-3.5 text-sm">
+            <li>
+              <a href="#kitchens" class="hover:text-[#e3b75e] transition-colors inline-block hover:translate-x-[-4px] duration-200">
+                تصميم وتنفيذ المطابخ
+              </a>
+            </li>
+            <li>
+              <a href="#services" class="hover:text-[#e3b75e] transition-colors inline-block hover:translate-x-[-4px] duration-200">
+                تفصيل الخزائن
+              </a>
+            </li>
+            <li>
+              <a href="#services" class="hover:text-[#e3b75e] transition-colors inline-block hover:translate-x-[-4px] duration-200">
+                تنفيذ المجالس
+              </a>
+            </li>
+            <li>
+              <a href="#services" class="hover:text-[#e3b75e] transition-colors inline-block hover:translate-x-[-4px] duration-200">
+                تركيب الستائر
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Quick Links (1fr) -->
+        <div>
+          <h4 class="font-bold text-base sm:text-[1.05rem] text-[#f4e8d8] mb-5">
+            روابط سريعة
+          </h4>
+          <ul class="space-y-3.5 text-sm">
+            <li>
+              <a href="#about" class="hover:text-[#e3b75e] transition-colors inline-block hover:translate-x-[-4px] duration-200">
+                من نحن
+              </a>
+            </li>
+            <li>
+              <a href="#portfolio" class="hover:text-[#e3b75e] transition-colors inline-block hover:translate-x-[-4px] duration-200">
+                معرض أعمالنا
+              </a>
+            </li>
+            <li>
+              <a href="#faq" class="hover:text-[#e3b75e] transition-colors inline-block hover:translate-x-[-4px] duration-200">
+                الأسئلة الشائعة
+              </a>
+            </li>
+            <li>
+              <a href="#contact" class="hover:text-[#e3b75e] transition-colors inline-block hover:translate-x-[-4px] duration-200">
+                تواصل معنا
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact info (1.2fr) -->
+        <div>
+          <h4 class="font-bold text-base sm:text-[1.05rem] text-[#f4e8d8] mb-5">
+            تواصل معنا
+          </h4>
+          <p class="text-sm text-[#ecd9bd]/80 mb-3" dir="ltr">
+            <span dir="rtl">هاتف وواتساب:</span> 0570993783
+          </p>
+          <p class="text-sm text-[#ecd9bd]/65 leading-relaxed">
+            متوفرون يوميًا من 9 صباحًا حتى 11 مساءً لاستقبال طلباتكم واستفساراتكم.
+          </p>
+        </div>
+
       </div>
 
-      <!-- Center: Navigation Links -->
-      <ul class="flex flex-wrap items-center justify-center gap-6 text-xs font-medium text-[#ecd9bd]">
-        <li v-for="link in navLinks" :key="link.label">
-          <a :href="link.href" class="hover:text-[#e3b75e] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c8932b] rounded">
-            {{ link.label }}
-          </a>
-        </li>
-      </ul>
-
-      <!-- Left: System Status & Telemetry Badge -->
-      <div class="flex items-center gap-3 px-4 py-2 rounded-full bg-[#3a2417] border border-[#c8932b]/25 shadow-inner">
-        <span class="relative flex h-2.5 w-2.5">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#1ebe5d] opacity-75" />
-          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#1ebe5d]" />
-        </span>
-        <span class="text-xs font-sans font-semibold text-[#f4e8d8] tracking-wide">جميع العناقيد السحابية تعمل بكفاءة</span>
+      <!-- Footer Bottom Bar matching exact design without credit text -->
+      <div class="py-6 flex items-center justify-center text-center text-xs sm:text-[0.86rem] text-[#ecd9bd]/60">
+        <span>© {{ new Date().getFullYear() }} جميع الحقوق محفوظة - مطابخ جوري للمطابخ والخزائن</span>
       </div>
+
     </div>
   </footer>
 </template>

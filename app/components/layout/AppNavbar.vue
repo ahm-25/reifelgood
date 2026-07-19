@@ -82,18 +82,18 @@ const exactNavLinks = [
         <!-- Left: Contact & WhatsApp Direct Links -->
         <div class="flex items-center gap-5 text-xs md:text-[0.85rem] font-semibold">
           <a 
-            href="tel:0541384726" 
+            href="tel:0570993783" 
             class="inline-flex items-center gap-2 text-[#ecd9bd] hover:text-[#e3b75e] transition-colors group"
           >
             <!-- Phone Icon -->
             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#e3b75e] group-hover:scale-110 transition-transform shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
-            <span dir="ltr">0541384726</span>
+            <span dir="ltr">0570993783</span>
           </a>
 
           <a 
-            href="https://wa.me/966541384726" 
+            href="https://wa.me/966570993783" 
             target="_blank" 
             rel="noopener" 
             class="inline-flex items-center gap-2 text-[#ecd9bd] hover:text-[#e3b75e] transition-colors group"
@@ -120,7 +120,7 @@ const exactNavLinks = [
           <div class="relative w-[54px] h-[54px] md:w-[58px] md:h-[58px] rounded-full p-[2px] bg-gradient-to-tr from-[#c8932b] via-[#e3b75e] to-[#c08a52] shadow-sm shrink-0 group-hover:scale-105 transition-transform duration-300">
             <img 
               src="https://reifelgoodnew.vercel.app/Css/logo.jpeg" 
-              alt="شعار ريف الجود للمطابخ والخزائن" 
+              alt="شعار مطابخ جوري للمطابخ والخزائن" 
               class="w-full h-full rounded-full object-cover bg-[#2b1810]"
               @error="(e: any) => { e.target.src = '/favicon.ico' }"
             />
@@ -129,7 +129,7 @@ const exactNavLinks = [
           <!-- Logo Text Structure -->
           <div class="logo-text flex flex-col text-right">
             <strong class="font-display text-xl md:text-[1.35rem] text-[#2b1810] leading-tight font-bold group-hover:text-[#6b4226] transition-colors">
-              ريف الجود
+              مطابخ جوري
             </strong>
             <span class="text-[0.72rem] md:text-xs text-[#6e5847] tracking-wide font-medium font-sans">
               للمطابخ والخزائن والمجالس والستائر
@@ -156,13 +156,13 @@ const exactNavLinks = [
         <!-- CTA & Phone Button -->
         <div class="nav-cta flex items-center gap-3">
           <a 
-            href="tel:0541384726" 
+            href="tel:0570993783" 
             class="icon-btn-call hidden sm:flex items-center gap-2 bg-[#2b1810] text-[#fdf8f0] hover:bg-[#6b4226] hover:-translate-y-0.5 py-2.5 px-5 rounded-full font-bold text-[0.92rem] shadow-sm transition-all duration-300 active:translate-y-0 border border-[#c8932b]/20"
           >
             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#e3b75e] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
-            <span dir="ltr" class="font-sans">0541384726</span>
+            <span dir="ltr" class="font-sans">0570993783</span>
           </a>
 
           <!-- Mobile Hamburger Button -->
@@ -217,17 +217,17 @@ const exactNavLinks = [
 
           <div class="mobile-nav-item flex flex-col gap-3 pt-2">
             <a 
-              href="tel:0541384726" 
+              href="tel:0570993783" 
               class="flex items-center justify-center gap-2 bg-[#2b1810] text-[#fdf8f0] hover:bg-[#6b4226] py-3.5 px-6 rounded-full font-bold text-base shadow-md transition-all w-full"
             >
               <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#e3b75e]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
-              <span dir="ltr">0541384726</span>
+              <span dir="ltr">0570993783</span>
             </a>
 
             <a 
-              href="https://wa.me/966541384726" 
+              href="https://wa.me/966570993783" 
               target="_blank" 
               rel="noopener"
               class="flex items-center justify-center gap-2 bg-[#1ebe5d] text-white hover:bg-[#19a24f] py-3.5 px-6 rounded-full font-bold text-base shadow-md transition-all w-full"

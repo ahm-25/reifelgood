@@ -76,7 +76,7 @@ registerAnimation((gsap) => {
     <div class="absolute inset-0 z-0 select-none pointer-events-none overflow-hidden">
       <img 
         src="https://reifelgoodnew.vercel.app/Css/hero.jpeg" 
-        alt="تصميم وتنفيذ مطابخ خشبية فاخرة - ريف الجود"
+        alt="تصميم وتنفيذ مطابخ خشبية فاخرة - مطابخ جوري"
         class="w-full h-full object-cover object-center"
         @error="(e: any) => { e.target.src = 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=2000&auto=format&fit=crop' }"
       />
@@ -154,14 +154,14 @@ registerAnimation((gsap) => {
 
       <!-- Description Paragraph -->
       <p class="hero-desc text-base sm:text-lg md:text-[1.18rem] text-[#ecd9bd]/90 max-w-[640px] mb-10 font-normal leading-relaxed font-sans">
-        ريف الجود للمطابخ والخزائن: نُصمم ونُنفذ وننفذ جميع أنواع المطابخ الخشبية والاكريليك والبولي لاك، والخزائن بكل أشكالها، والمجالس العربية والمودرن، والستائر الفاخرة. خامات أصلية، تفصيل بالمقاس، ومعاينة وتصميم مجاني في موقعك.
+        مطابخ جوري للمطابخ والخزائن: نُصمم ونُنفذ وننفذ جميع أنواع المطابخ الخشبية والاكريليك والبولي لاك، والخزائن بكل أشكالها، والمجالس العربية والمودرن، والستائر الفاخرة. خامات أصلية، تفصيل بالمقاس، ومعاينة وتصميم مجاني في موقعك.
       </p>
 
       <!-- Action Buttons Group -->
       <div class="hero-actions-group flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto mb-12">
         <!-- Gold WhatsApp Quote Button -->
         <a 
-          href="https://wa.me/966541384726?text=السلام%20عليكم%2C%20أرغب%20بمعرفة%20تفاصيل%20عن%20المطابخ%20والخزائن" 
+          href="https://wa.me/966570993783?text=السلام%20عليكم%2C%20أرغب%20بمعرفة%20تفاصيل%20عن%20المطابخ%20والخزائن" 
           target="_blank" 
           rel="noopener"
           class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-gradient-to-l from-[#e3b75e] via-[#c8932b] to-[#b8801d] text-[#2b1810] font-bold text-base shadow-xl shadow-[#c8932b]/35 hover:brightness-110 hover:-translate-y-0.5 transition-all duration-300 active:translate-y-0"
@@ -174,7 +174,7 @@ registerAnimation((gsap) => {
 
         <!-- Outline Call Button -->
         <a 
-          href="tel:0541384726" 
+          href="tel:0570993783" 
           class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-[#2b1810]/60 backdrop-blur-md border-[1.5px] border-[#ecd9bd]/40 text-[#fdf8f0] font-bold text-base hover:bg-[#c8932b]/20 hover:border-[#e3b75e] hover:-translate-y-0.5 transition-all duration-300 active:translate-y-0 shadow-lg"
         >
           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#e3b75e] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
