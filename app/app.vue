@@ -3,10 +3,15 @@ import AppNavbar from '~/components/layout/AppNavbar.vue'
 import AppFooter from '~/components/layout/AppFooter.vue'
 import AmbientBackground from '~/components/layout/AmbientBackground.vue'
 import AppFloatingButtons from '~/components/layout/AppFloatingButtons.vue'
+import AppLoadingScreen from '~/components/layout/AppLoadingScreen.vue'
+import AppThemePaletteSwitcher from '~/components/common/AppThemePaletteSwitcher.vue'
 </script>
 
 <template>
   <div class="min-h-screen bg-[#2b1810] text-[#f4e8d8] antialiased font-sans flex flex-col relative selection:bg-[#c8932b]/35 selection:text-white" dir="rtl">
+    <!-- Global Luxury Loading Screen Overlay -->
+    <AppLoadingScreen />
+
     <!-- Accessible Skip to Main Content Link -->
     <a 
       href="#main-content" 
@@ -28,6 +33,9 @@ import AppFloatingButtons from '~/components/layout/AppFloatingButtons.vue'
 
     <!-- Floating Contact Corner Buttons (WhatsApp & Phone) -->
     <AppFloatingButtons />
+
+    <!-- Interactive Color Palette Switcher for Ladies/Luxury Themes -->
+    <AppThemePaletteSwitcher />
 
     <!-- Minimal Apple-Inspired Footer -->
     <AppFooter />

@@ -43,9 +43,6 @@ onMounted(() => {
 
 <template>
   <section id="areas" ref="areasRef" class="py-20 sm:py-28 bg-[#2b1810] relative overflow-hidden font-sans text-white" dir="rtl">
-    <!-- Subtle Decorative Ambient Gold Glow -->
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[750px] h-[500px] bg-[#c8932b]/8 rounded-full blur-3xl pointer-events-none" />
-
     <div class="max-w-5xl mx-auto px-6 lg:px-12 relative z-10 text-center">
       
       <!-- Section Header -->

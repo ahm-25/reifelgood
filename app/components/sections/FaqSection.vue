@@ -48,9 +48,6 @@ const toggleFaq = (idx: number) => {
 
 <template>
   <section id="faq" class="py-20 sm:py-28 bg-[#faf5ec] relative overflow-hidden font-sans text-[#2b1810]" dir="rtl">
-    <!-- Subtle Decorative Ambient Gold Glow -->
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-[#c8932b]/5 rounded-full blur-3xl pointer-events-none" />
-
     <div class="max-w-4xl mx-auto px-6 lg:px-12 relative z-10">
       
       <!-- Section Header -->
@@ -69,7 +66,7 @@ const toggleFaq = (idx: number) => {
         <div 
           v-for="(item, idx) in faqList" 
           :key="item.id"
-          class="bg-white rounded-2xl shadow-sm hover:shadow-md border border-[#d3c5b4]/60 hover:border-[#c8932b] transition-all duration-300 overflow-hidden"
+          class="faq-card-item bg-white rounded-2xl shadow-sm hover:shadow-md border border-[#d3c5b4]/60 hover:border-[#c8932b] transition-all duration-300 overflow-hidden"
           :class="{ 'border-[#c8932b] shadow-md ring-1 ring-[#c8932b]/20': openIndex === idx }"
         >
           <!-- Question Header -->

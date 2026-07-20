@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import { ref, watch, nextTick, onMounted, onUnmounted } from 'vue'
 import { useGsap } from '~/composables/useGsap'
+import { useThemePalette } from '~/composables/useThemePalette'
 
 const headerRef = ref<HTMLElement | null>(null)
 const isScrolled = ref(false)
 const mobileMenuOpen = ref(false)
 
 const { registerAnimation, gsap } = useGsap()
+const { toggleSwitcher } = useThemePalette()
 
 registerAnimation((gsap) => {
   gsap.fromTo('.topbar', 
@@ -64,7 +66,7 @@ const exactNavLinks = [
     <div class="topbar bg-[#2b1810] text-[#ecd9bd] text-[0.85rem] border-b border-[#6b4226]/40">
       <div class="max-w-7xl mx-auto px-6 md:px-12 py-[9px] flex flex-wrap items-center justify-between gap-3">
         <!-- Right: Marquee / Benefits list -->
-        <div class="marq-mini flex flex-wrap items-center gap-6 md:gap-8 text-white/70 font-medium text-xs md:text-[0.85rem]">
+        <div class="marq-mini flex flex-wrap items-center gap-6 md:gap-8 text-[#f4e8d8] font-semibold text-xs md:text-[0.85rem]">
           <span class="flex items-center gap-2">
             <span class="w-1.5 h-1.5 rounded-full bg-[#e3b75e]" />
             تصميم مجاني للمطابخ
@@ -155,6 +157,19 @@ const exactNavLinks = [
 
         <!-- CTA & Phone Button -->
         <div class="nav-cta flex items-center gap-3">
+          <!-- Theme Switcher Trigger in Navbar -->
+          
+          <!-- <button
+            @click="toggleSwitcher(true)"
+            type="button"
+            class="hidden md:flex items-center gap-2 bg-gradient-to-r from-[#c8932b]/15 to-[#e3b75e]/25 text-[#2b1810] hover:bg-[#c8932b] hover:text-[#2b1810] py-2.5 px-4 rounded-full font-bold text-xs md:text-sm shadow-sm transition-all duration-300 border border-[#c8932b]/40 hover:scale-105 cursor-pointer"
+            title="تبديل ألوان الموقع والاقتراحات"
+          >
+            <span class="text-base">🌸</span>
+            <span>ألوان السيدات</span>
+          </button> -->
+          
+
           <a 
             href="tel:0570993783" 
             class="icon-btn-call hidden sm:flex items-center gap-2 bg-[#2b1810] text-[#fdf8f0] hover:bg-[#6b4226] hover:-translate-y-0.5 py-2.5 px-5 rounded-full font-bold text-[0.92rem] shadow-sm transition-all duration-300 active:translate-y-0 border border-[#c8932b]/20"
@@ -216,6 +231,16 @@ const exactNavLinks = [
           </ul>
 
           <div class="mobile-nav-item flex flex-col gap-3 pt-2">
+            <button
+              @click="toggleSwitcher(true); mobileMenuOpen = false"
+              type="button"
+              class="flex items-center justify-center gap-2 bg-gradient-to-r from-[#c8932b]/20 to-[#e3b75e]/30 text-[#2b1810] hover:bg-[#c8932b] py-3.5 px-6 rounded-full font-bold text-base shadow-md transition-all w-full border border-[#c8932b]/40 cursor-pointer"
+            >
+              <span>🌸</span>
+              <span>ألوان السيدات والاقتراحات</span>
+            </button>
+
+
             <a 
               href="tel:0570993783" 
               class="flex items-center justify-center gap-2 bg-[#2b1810] text-[#fdf8f0] hover:bg-[#6b4226] py-3.5 px-6 rounded-full font-bold text-base shadow-md transition-all w-full"

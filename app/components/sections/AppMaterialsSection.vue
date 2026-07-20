@@ -85,9 +85,6 @@ onMounted(() => {
 
 <template>
   <section id="materials" ref="materialsRef" class="py-20 sm:py-28 bg-[#2b1810] relative overflow-hidden font-sans text-white" dir="rtl">
-    <!-- Subtle Ambient Gold Glow Overlay -->
-    <div class="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[550px] bg-[#c8932b]/8 rounded-full blur-3xl pointer-events-none" />
-
     <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
       
       <!-- Section Header -->
@@ -102,32 +99,32 @@ onMounted(() => {
       </div>
 
       <!-- Materials Grid: 3 Cards Across exactly matching .mat-grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6.5">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
         
         <div 
           v-for="(mat, idx) in materialsList" 
           :key="idx"
-          class="mat-card-item group bg-white/5 hover:bg-white/9 border border-[#f4e8d8]/15 hover:border-[#c8932b] rounded-2xl p-7 sm:p-8 backdrop-blur-md transition-all duration-350 transform hover:-translate-y-2 flex flex-col justify-between"
+          class="mat-card-item group relative bg-white/5 hover:bg-white/10 border border-[#f4e8d8]/15 hover:border-[#c8932b] border-t-[4px] border-t-[#c8932b]/80 rounded-2xl p-7 sm:p-8 backdrop-blur-md transition-all duration-350 transform hover:-translate-y-2 flex flex-col justify-between overflow-hidden shadow-sm hover:shadow-xl"
         >
-          <div>
+          <div class="relative z-10">
             <!-- English Header Code in Gold Display Font -->
-            <div class="font-display text-[#e3b75e] text-2xl sm:text-[1.8rem] font-bold mb-2.5 tracking-wide group-hover:text-[#c8932b] transition-colors duration-300">
+            <div class="font-display text-[#e3b75e] text-2xl sm:text-[1.8rem] font-extrabold mb-2.5 tracking-wide group-hover:text-[#c8932b] transition-colors duration-300">
               {{ mat.code }}
             </div>
 
             <!-- Arabic Title in Aref Ruqaa -->
-            <h4 class="font-display text-[#f4e8d8] text-lg sm:text-[1.2rem] font-bold mb-2.5 leading-snug">
+            <h4 class="font-display text-[#f4e8d8] text-lg sm:text-[1.22rem] font-bold mb-3 leading-snug group-hover:text-[#c8932b] transition-colors duration-300">
               {{ mat.title }}
             </h4>
 
             <!-- Description -->
-            <p class="font-sans text-xs sm:text-[0.9rem] text-[#f4e8d8]/75 leading-relaxed m-0">
+            <p class="font-sans text-xs sm:text-[0.92rem] text-[#ecd9bd] leading-relaxed m-0 font-semibold">
               {{ mat.desc }}
             </p>
           </div>
 
           <!-- Progress / Accent Bar -->
-          <div class="h-2 rounded-full bg-white/12 overflow-hidden mt-6">
+          <div class="h-2.5 rounded-full bg-white/12 overflow-hidden mt-6 relative z-10 border border-white/5">
             <span 
               class="mat-bar-inner block h-full rounded-full bg-gradient-to-r from-[#c8932b] to-[#e3b75e] transition-all duration-300 shadow-sm"
               :data-width="mat.width"

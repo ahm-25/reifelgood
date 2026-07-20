@@ -49,9 +49,6 @@ onMounted(() => {
 
 <template>
   <section id="styles" ref="stylesRef" class="py-20 sm:py-28 bg-[#faf5ec] relative overflow-hidden font-sans text-[#2b1810]" dir="rtl">
-    <!-- Subtle Decorative Ambient Gold Glow -->
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[750px] h-[550px] bg-[#c8932b]/5 rounded-full blur-3xl pointer-events-none" />
-
     <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
       
       <!-- Section Header -->
@@ -71,7 +68,7 @@ onMounted(() => {
         <div 
           v-for="item in stylesList" 
           :key="item.id"
-          class="style-card-item group relative rounded-2xl overflow-hidden aspect-[3/4] shadow-md hover:shadow-2xl transition-all duration-400 border border-[#2b1810]/5"
+          class="style-card-item group relative rounded-2xl overflow-hidden aspect-[3/4] shadow-md hover:shadow-2xl transition-all duration-400 border-2 border-[#c8932b]/30 hover:border-[#c8932b] transform hover:-translate-y-2"
         >
           <!-- Background Image matching exact portrait ratio -->
           <img 
@@ -81,15 +78,15 @@ onMounted(() => {
             class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108"
           />
 
-          <!-- Caption Overlay with exact bottom gradient from #140c08 -->
-          <div class="absolute inset-0 bg-gradient-to-t from-[#140c08]/95 via-[#140c08]/50 sm:via-[#140c08]/35 to-transparent flex flex-col justify-end p-6 sm:p-7 text-right transition-opacity duration-300">
+          <!-- Protected Caption Overlay: style-overlay-gradient never gets overridden by solid white gradient stops -->
+          <div class="style-overlay-gradient absolute inset-0 flex flex-col justify-end p-6 sm:p-8 text-right transition-all duration-300">
             <!-- Title in Aref Ruqaa -->
-            <h4 class="font-display text-[#f4e8d8] text-xl sm:text-[1.35rem] font-bold mb-1.5 leading-snug group-hover:text-[#e3b75e] transition-colors duration-300">
+            <h4 class="font-display text-white text-xl sm:text-[1.35rem] font-extrabold mb-2 leading-snug group-hover:text-[#e3b75e] transition-colors duration-300">
               {{ item.title }}
             </h4>
 
             <!-- Subtitle description -->
-            <p class="font-sans text-xs sm:text-[0.88rem] text-[#f4e8d8]/80 leading-relaxed m-0">
+            <p class="font-sans text-xs sm:text-[0.92rem] text-white/90 leading-relaxed m-0 font-semibold">
               {{ item.desc }}
             </p>
           </div>

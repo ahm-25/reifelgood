@@ -3,7 +3,7 @@ import { ref } from 'vue'
 </script>
 
 <template>
-  <footer class="bg-[#1c0f08] text-[#ecd9bd]/70 pt-16 sm:pt-20 border-t border-[#ecd9bd]/10 font-sans relative z-10" dir="rtl">
+  <footer class="site-footer bg-[#1c0f08] text-[#ecd9bd]/70 pt-16 sm:pt-20 border-t border-[#ecd9bd]/10 font-sans relative z-10" dir="rtl">
     
     <div class="max-w-6xl mx-auto px-6 lg:px-12">
       

@@ -27,7 +27,7 @@ onMounted(() => {
 
 <template>
   <section id="article" ref="articleRef" class="py-20 sm:py-28 bg-white relative overflow-hidden font-sans text-[#2b1810]" dir="rtl">
-    <div class="max-w-4xl mx-auto px-6 lg:px-12 relative z-10 article-box-reveal">
+    <div class="article-card-item max-w-4xl mx-auto px-6 lg:px-12 relative z-10 article-box-reveal">
       
       <!-- Eyebrow Badge -->
       <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#c8932b]/15 border border-[#e3b75e]/35 text-[#b8801d] font-bold text-sm mb-5">

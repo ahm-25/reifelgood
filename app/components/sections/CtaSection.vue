@@ -62,9 +62,6 @@ onMounted(() => {
 
 <template>
   <section id="contact" ref="contactRef" class="py-20 sm:py-28 bg-[#faf5ec] relative overflow-hidden font-sans text-[#2b1810]" dir="rtl">
-    <!-- Subtle Decorative Ambient Gold Glow -->
-    <div class="absolute bottom-0 right-1/4 w-[600px] h-[500px] bg-[#c8932b]/6 rounded-full blur-3xl pointer-events-none" />
-
     <div class="max-w-6xl mx-auto px-6 lg:px-12 relative z-10">
       
       <!-- Section Header -->
@@ -85,7 +82,7 @@ onMounted(() => {
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
         
         <!-- Right Column (in RTL): Contact Form Card (lg:col-span-7) -->
-        <div class="contact-form-reveal lg:col-span-7 bg-white rounded-3xl p-7 sm:p-11 shadow-2xl border border-[#2b1810]/5 order-1">
+        <div class="cta-form-card contact-form-reveal lg:col-span-7 bg-white rounded-3xl p-7 sm:p-11 shadow-2xl border border-[#2b1810]/5 order-1">
           <form @submit="handleFormSubmit" class="space-y-5">
             
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -185,7 +182,7 @@ onMounted(() => {
         </div>
 
         <!-- Left Column (in RTL): Contact Info Card (lg:col-span-5) -->
-        <div class="contact-info-reveal lg:col-span-5 bg-[#2b1810] rounded-3xl p-8 sm:p-11 text-[#f4e8d8] shadow-xl flex flex-col justify-between order-2">
+        <div class="cta-info-card contact-info-reveal lg:col-span-5 bg-[#2b1810] rounded-3xl p-8 sm:p-11 text-[#f4e8d8] shadow-xl flex flex-col justify-between order-2">
           
           <div>
             <h3 class="font-display font-bold text-xl sm:text-2xl text-[#f4e8d8] mb-3.5">

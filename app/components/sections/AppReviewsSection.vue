@@ -37,9 +37,6 @@ const reviewsList = [
 
 <template>
   <section id="reviews" class="py-20 sm:py-28 bg-[#2b1810] relative overflow-hidden font-sans text-white" dir="rtl">
-    <!-- Subtle Decorative Ambient Gold Glow -->
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[550px] bg-[#c8932b]/8 rounded-full blur-3xl pointer-events-none" />
-
     <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 mb-14 text-center">
       <!-- Section Header -->
       <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-[#ecd9bd] font-bold text-sm mb-5">
@@ -58,7 +55,7 @@ const reviewsList = [
         <div 
           v-for="(rev, idx) in [...reviewsList, ...reviewsList]" 
           :key="idx"
-          class="w-[340px] shrink-0 bg-white/6 hover:bg-white/10 border border-[#f4e8d8]/15 hover:border-[#c8932b] rounded-2xl p-7 backdrop-blur-md transition-all duration-350 transform hover:-translate-y-2 flex flex-col justify-between text-right shadow-lg"
+          class="review-card-item w-[350px] shrink-0 bg-white/6 hover:bg-white/12 border border-[#f4e8d8]/15 hover:border-[#c8932b] border-t-[3.5px] border-t-[#c8932b]/80 rounded-2xl p-7 backdrop-blur-md transition-all duration-350 transform hover:-translate-y-2 flex flex-col justify-between text-right shadow-md hover:shadow-xl"
         >
           <div>
             <!-- 5 Golden Stars exactly matching .test-stars -->

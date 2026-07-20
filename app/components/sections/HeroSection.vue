@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { useGsap } from '~/composables/useGsap'
+import { useThemePalette } from '~/composables/useThemePalette'
 
 const heroRef = ref<HTMLElement | null>(null)
 const particlesContainerRef = ref<HTMLElement | null>(null)
 const { registerAnimation, gsap } = useGsap()
+const { activePaletteId } = useThemePalette()
 
 // Exact particle spawner matching original site logic: spawnParticles('heroParticles', 22)
 const spawnParticles = (container: HTMLElement | null, count: number) => {
@@ -75,13 +77,16 @@ registerAnimation((gsap) => {
     <!-- ============ 1. Background Image & Dark Overlay ============ -->
     <div class="absolute inset-0 z-0 select-none pointer-events-none overflow-hidden">
       <img 
-        src="https://reifelgoodnew.vercel.app/Css/hero.jpeg" 
+        :src="activePaletteId === 'pearl-white-gold' ? 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2000&auto=format&fit=crop' : 'https://reifelgoodnew.vercel.app/Css/hero.jpeg'" 
         alt="تصميم وتنفيذ مطابخ خشبية فاخرة - مطابخ جوري"
-        class="w-full h-full object-cover object-center"
+        class="w-full h-full object-cover object-center transition-all duration-700"
         @error="(e: any) => { e.target.src = 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=2000&auto=format&fit=crop' }"
       />
-      <!-- Exact Gradient Overlay: linear-gradient(100deg, rgba(28,16,10,.94) 10%, rgba(28,16,10,.74) 45%, rgba(28,16,10,.42) 100%) -->
-      <div class="absolute inset-0 bg-gradient-to-l from-[#1c100a]/95 via-[#1c100a]/75 to-[#1c100a]/50 z-10" />
+      <!-- Exact Gradient Overlay: customized dynamically when pearl-white-gold is selected -->
+      <div 
+        class="absolute inset-0 z-10 transition-all duration-700"
+        :class="activePaletteId === 'pearl-white-gold' ? 'hero-pearl-overlay' : 'bg-gradient-to-l from-[#1c100a]/95 via-[#1c100a]/75 to-[#1c100a]/50'"
+      />
       
       <!-- Exact 22 Dynamic Floating Golden Particles Container -->
       <div ref="particlesContainerRef" id="heroParticles" class="particles z-15" />
@@ -153,8 +158,8 @@ registerAnimation((gsap) => {
       </h1>
 
       <!-- Description Paragraph -->
-      <p class="hero-desc text-base sm:text-lg md:text-[1.18rem] text-[#ecd9bd]/90 max-w-[640px] mb-10 font-normal leading-relaxed font-sans">
-        مطابخ جوري للمطابخ والخزائن: نُصمم ونُنفذ وننفذ جميع أنواع المطابخ الخشبية والاكريليك والبولي لاك، والخزائن بكل أشكالها، والمجالس العربية والمودرن، والستائر الفاخرة. خامات أصلية، تفصيل بالمقاس، ومعاينة وتصميم مجاني في موقعك.
+      <p class="hero-desc text-base sm:text-lg md:text-[1.18rem] text-[#fdf8f0] font-semibold max-w-[660px] mb-10 leading-relaxed font-sans bg-[#1c100a]/55 backdrop-blur-md px-6 py-4.5 rounded-2xl border border-[#ecd9bd]/30 shadow-lg">
+        مطابخ جوري للمطابخ والخزائن: نُصمم ونُنفذ جميع أنواع المطابخ الخشبية والاكريليك والبولي لاك، والخزائن بكل أشكالها، والمجالس العربية والمودرن، والستائر الفاخرة. خامات أصلية، تفصيل بالمقاس، ومعاينة وتصميم مجاني في موقعك.
       </p>
 
       <!-- Action Buttons Group -->
@@ -186,19 +191,19 @@ registerAnimation((gsap) => {
 
       <!-- Hero Tags (Service Pills) -->
       <div class="hero-tags-group flex flex-wrap items-center justify-center gap-3 max-w-3xl">
-        <span class="px-4 py-2 rounded-full bg-white/[0.07] border border-[#ecd9bd]/25 text-[#ecd9bd] text-xs md:text-[0.85rem] font-semibold hover:border-[#e3b75e] transition-colors">
+        <span class="px-4 py-2 rounded-full bg-[#2b1810]/60 backdrop-blur-md border border-[#ecd9bd]/40 text-[#fdf8f0] text-xs md:text-[0.85rem] font-bold hover:border-[#e3b75e] hover:bg-[#c8932b]/20 transition-all shadow-sm">
           مطابخ خشب وMDF
         </span>
-        <span class="px-4 py-2 rounded-full bg-white/[0.07] border border-[#ecd9bd]/25 text-[#ecd9bd] text-xs md:text-[0.85rem] font-semibold hover:border-[#e3b75e] transition-colors">
+        <span class="px-4 py-2 rounded-full bg-[#2b1810]/60 backdrop-blur-md border border-[#ecd9bd]/40 text-[#fdf8f0] text-xs md:text-[0.85rem] font-bold hover:border-[#e3b75e] hover:bg-[#c8932b]/20 transition-all shadow-sm">
           اكريليك وبولي لاك
         </span>
-        <span class="px-4 py-2 rounded-full bg-white/[0.07] border border-[#ecd9bd]/25 text-[#ecd9bd] text-xs md:text-[0.85rem] font-semibold hover:border-[#e3b75e] transition-colors">
+        <span class="px-4 py-2 rounded-full bg-[#2b1810]/60 backdrop-blur-md border border-[#ecd9bd]/40 text-[#fdf8f0] text-xs md:text-[0.85rem] font-bold hover:border-[#e3b75e] hover:bg-[#c8932b]/20 transition-all shadow-sm">
           خزائن بالمقاس
         </span>
-        <span class="px-4 py-2 rounded-full bg-white/[0.07] border border-[#ecd9bd]/25 text-[#ecd9bd] text-xs md:text-[0.85rem] font-semibold hover:border-[#e3b75e] transition-colors">
+        <span class="px-4 py-2 rounded-full bg-[#2b1810]/60 backdrop-blur-md border border-[#ecd9bd]/40 text-[#fdf8f0] text-xs md:text-[0.85rem] font-bold hover:border-[#e3b75e] hover:bg-[#c8932b]/20 transition-all shadow-sm">
           مجالس عربي ومودرن
         </span>
-        <span class="px-4 py-2 rounded-full bg-white/[0.07] border border-[#ecd9bd]/25 text-[#ecd9bd] text-xs md:text-[0.85rem] font-semibold hover:border-[#e3b75e] transition-colors">
+        <span class="px-4 py-2 rounded-full bg-[#2b1810]/60 backdrop-blur-md border border-[#ecd9bd]/40 text-[#fdf8f0] text-xs md:text-[0.85rem] font-bold hover:border-[#e3b75e] hover:bg-[#c8932b]/20 transition-all shadow-sm">
           ستائر بجميع الأنواع
         </span>
       </div>

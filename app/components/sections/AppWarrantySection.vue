@@ -71,9 +71,6 @@ onMounted(() => {
 
 <template>
   <section id="warranty" ref="warrantyRef" class="py-20 sm:py-28 bg-[#faf5ec] relative overflow-hidden font-sans text-[#2b1810]" dir="rtl">
-    <!-- Subtle Decorative Ambient Gold Glow -->
-    <div class="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[500px] bg-[#c8932b]/6 rounded-full blur-3xl pointer-events-none" />
-
     <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
       
       <!-- Two Columns Grid exactly matching .warranty-grid (.9fr 1.1fr) -->
@@ -82,7 +79,7 @@ onMounted(() => {
         <!-- Right Column: Header & Checkpoints List -->
         <div class="warranty-text-reveal order-2 lg:order-1">
           <!-- Section Header Badge -->
-          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#c8932b]/15 border border-[#e3b75e]/35 text-[#b8801d] font-bold text-sm mb-5">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#c8932b]/15 border border-[#c8932b]/35 text-[#c8932b] font-bold text-sm mb-5">
             <span class="w-2 h-2 rounded-full bg-[#c8932b] animate-pulse"></span>
             <span>الضمان وخدمة ما بعد البيع</span>
           </div>
@@ -113,7 +110,7 @@ onMounted(() => {
 
         <!-- Left Column: White Shield Card exactly matching .warranty-card -->
         <div class="warranty-card-reveal order-1 lg:order-2">
-          <div class="bg-white rounded-3xl p-8 sm:p-11 shadow-2xl relative border border-[#2b1810]/5 text-center sm:text-right flex flex-col items-center sm:items-start transition-all duration-350 hover:shadow-[0_25px_50px_-12px_rgba(200,147,43,0.15)]">
+          <div class="warranty-card-item bg-white rounded-3xl p-8 sm:p-11 shadow-2xl relative border-2 border-[#c8932b]/35 text-center sm:text-right flex flex-col items-center sm:items-start transition-all duration-350 hover:shadow-2xl hover:border-[#c8932b] transform hover:-translate-y-2">
             
             <!-- Shield Circle Icon exactly matching .big-ic -->
             <div class="w-[90px] h-[90px] rounded-full bg-[#faf5ec] border border-[#c8932b]/25 flex items-center justify-center mb-6 mx-auto sm:mx-0 shadow-inner group">
